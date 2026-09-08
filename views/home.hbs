@@ -1,0 +1,31 @@
+<div style="max-width: 500px; margin: 40px auto; font-family: Arial, sans-serif; background: #1e1e1e; color: #fff; padding: 20px; border-radius: 8px;">
+    <h2 style="text-align: center; color: #00d2ff;">Inscripción Torneo eSports 🎮</h2>
+    <form action="/register" method="POST">
+        <div style="margin-bottom: 15px;">
+            <label>Nombre del equipo:</label><br>
+            <input type="text" name="teamName" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Nombre del capitán:</label><br>
+            <input type="text" name="captainName" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Juego:</label><br>
+            <select name="game" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                <option value="">Selecciona un juego</option>
+                <option value="Valorant">Valorant</option>
+                <option value="League of Legends">League of Legends</option>
+                <option value="CS2">CS2</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Correo electrónico de contacto:</label><br>
+            <input type="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Cantidad de jugadores suplentes:</label><br>
+            <input type="number" name="substitutesCount" min="0" value="0" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <button type="submit" style="width: 100%; padding: 10px; background: #00d2ff; border: none; font-weight: bold; cursor: pointer;">Inscribir Equipo</button>
+    </form>
+</div>
