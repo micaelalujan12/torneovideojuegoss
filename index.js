@@ -4,7 +4,6 @@ const { engine } = require('express-handlebars');
 const app = express();
 const PORT = 3000;
 
-// Configuración de Handlebars
 app.engine('hbs', engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', './views');
