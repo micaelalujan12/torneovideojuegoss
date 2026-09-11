@@ -6,9 +6,9 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 
-const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/torneo';
+const mongoose = require('mongoose');
 
-mongoose.connect(mongoURI)
+mongoose.connect('mongodb+srv://micaelalujan387_db_user:rZ1UHF3VnQgJbUwb@cluster0.ugzwynk.mongodb.net/?appName=Cluster0')
   .then(() => console.log('¡Conectado a MongoDB con éxito!'))
   .catch(err => console.error('Error al conectar a MongoDB:', err));
 
