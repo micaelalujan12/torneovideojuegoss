@@ -7,9 +7,10 @@ const app = express();
 const PORT = 3000;
 
 const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/torneo';
+
 mongoose.connect(mongoURI)
-    .then(() => console.log('¡Conectado a MongoDB con éxito!'))
-    .catch(err => console.error('Error al conectar a MongoDB:', err));
+  .then(() => console.log('¡Conectado a MongoDB con éxito!'))
+  .catch(err => console.error('Error al conectar a MongoDB:', err));
 
 const equipoSchema = new mongoose.Schema({
     nombreEquipo: { type: String, required: true },
