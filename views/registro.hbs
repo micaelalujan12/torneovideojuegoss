@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripción - Torneo eSports</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inscripción al Torneo</h1>
+        <form action="/registro" method="POST">
+            <div>
+                <label>Nombre del equipo:</label>
+                <input type="text" name="nombreEquipo" required>
+            </div>
+            <div>
+                <label>Nombre del capitán:</label>
+                <input type="text" name="nombreCapitan" required>
+            </div>
+            <div>
+                <label>Juego:</label>
+                <select name="juego" required style="width: 100%; padding: 0.75rem; border-radius: 6px; background-color: #0f172a; color: #fff; border: 1px solid #334155;">
+                    <option value="Valorant">Valorant</option>
+                    <option value="League of Legends">League of Legends</option>
+                    <option value="CS2">CS2</option>
+                </select>
+            </div>
+            <div>
+                <label>Correo electrónico de contacto:</label>
+                <input type="email" name="correo" required>
+            </div>
+            <div>
+                <label>Cantidad de jugadores suplentes:</label>
+                <input type="number" name="suplentes" min="0" required>
+            </div>
+            <button type="submit" style="margin-top: 1rem;">Inscribir Equipo</button>
+        </form>
+        <br>
+        <a href="/" style="color: #94a3b8; font-size: 0.85rem; text-decoration: none;">Volver al inicio</a>
+    </div>
+</body>
+</html>

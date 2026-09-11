@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos Inscriptos - Torneo eSports</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container" style="max-width: 800px;">
+        <h1>Equipos Inscriptos</h1>
+        
+        {{#if equipos.length}}
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #334155; color: #38bdf8;">
+                        <th style="padding: 10px;">Equipo</th>
+                        <th style="padding: 10px;">Capitán</th>
+                        <th style="padding: 10px;">Juego</th>
+                        <th style="padding: 10px;">Correo</th>
+                        <th style="padding: 10px;">Suplentes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each equipos}}
+                    <tr style="border-bottom: 1px solid #1e293b;">
+                        <td style="padding: 10px;">{{this.nombreEquipo}}</td>
+                        <td style="padding: 10px;">{{this.nombreCapitan}}</td>
+                        <td style="padding: 10px;">{{this.juego}}</td>
+                        <td style="padding: 10px;">{{this.correo}}</td>
+                        <td style="padding: 10px; text-align: center;">{{this.suplentes}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        {{else}}
+            <p style="color: #94a3b8; margin: 1.5rem 0;">Todavía no hay equipos inscriptos en el torneo.</p>
+        {{/if}}
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+            <a href="/registro" class="btn">Inscribir otro equipo</a>
+            <a href="/" class="btn" style="background-color: #334155; color: #f8fafc;">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>
