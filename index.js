@@ -6,12 +6,14 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
 
-mongoose.connect('mongodb+srv://micaelalujan387_db_user:rZ1UHF3VnQgJbUwb@cluster0.ugzwynk.mongodb.net/torneo?appName=Cluster0', {
+mongoose.connect('mongodb+srv://micaelalujan387_db_user:torneo1234@cluster0.ugzwynk.mongodb.net/torneo?appName=Cluster0', {
   serverSelectionTimeoutMS: 30000,
   socketTimeoutMS: 45000,
-})
-.then(() => console.log('Conectado a Atlas'))
-.catch(err => console.log('Error:', err));
+}).then(() => {
+    console.log("Conexión exitosa a MongoDB");
+}).catch((error) => {
+    console.error("Error al conectar a MongoDB:", error);
+});
 
 const equipoSchema = new mongoose.Schema({
     nombreEquipo: { type: String, required: true },
