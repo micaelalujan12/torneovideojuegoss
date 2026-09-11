@@ -1,7 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
-const mongoose = require('mongoose');
 
 const app = express();
 const PORT = 3000;
